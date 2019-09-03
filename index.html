@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Fant 2019</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="main.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+          <div class="header">
+            <div class="headerLeft">
+              <h1 id="homeButton">FANT</h1>
+            </div>
+
+            <div class="headerRight">
+              <h1 id="me">Login</h1>
+            </div>
+          </div>
+
+          <div class="content">
+
+            <div id="login">
+              <h1>USERNAME</h1>
+              <input id="usernameLogin" type="text"></input>
+              <h1>PASSWORD</h1>
+              <input id="passwordLogin" type="text"></input>
+              <button type="button" onclick="login()">Login</button>
+              <button type="button" onClick="toggleView('login', 'createUser')">Create new user</button>
+            </div>
+
+            <div id="createUser">
+              <p>Firstname</p><input id="createUserFirstname"></input>
+              <p>Lastname</p><input id="createUserLastname"></input>
+              <p>Street Adress</p><input id="createUserStreetAdress"></input>
+              <p>City</p><input id="createUserCity"></input>
+              <p>Postal Code</p><input id="createUserPostalCode"></input>
+              <p>Email Adress</p><input id="createUserEmailAdress"></input>
+              <p>Username</p><input id="createUserUsername"></input>
+              <p>Password</p><input id="createUserPassword"></input>
+              <button type="button" onclick="createUser()">Create User</button>
+            </div>
+
+            <div id="ads">
+              <div class="box">
+                <img src="./pictures/fant1.jpg"/>
+                <h1>Logik tv</h1>
+                <p class="price">500 kr</p>
+                <p>
+                  Selger ein brukt logik TV, er blitt nokre år gammal. 29 tommer HD LED TV. Kjøper betaler frakt. Ny eller brukt:	Brukt
+                  </p>
+              </div>
+              <div class="box">
+                <img src="./pictures/fant2.jpg"/>
+                <h1>Siemens Platetopp 50%</h1>
+                <p class="price">7 900 kr</p>
+                <p>
+                  Selger induksjonsplatetopp som har stått utstillt i vår butikk på Lade. 80cm. Veil pris: 15 799,- INGEN reservasjon,
+                   100% forskuddsbetaling. MÅ hentes på Kvik lade i uke 49/50. 2 års garanti fra kjøpsdato. Ingen returrett.
+                   Spesifikasjoner: https://www.siemens-home.bsh-group.com/no/produktliste/ED877FSF1X Med forbehold om feil i annonsetekst.
+                 </p>
+              </div>
+              <div class="box">
+                <img src="./pictures/fant3.jpg"/>
+                <h1>PC-veske</h1>
+                <p class="price">250 kr</p>
+                <p>
+                  Selger en meget fin og praktisk skulderveske til bærbar PC. Den er av merket LONDON FOG (Sterling Edition)
+                  Som det kan sees av bildet, har den mange oppbevaringslommer. selges til kr 250,- eller høystbydende
+                </p>
+              </div>
+              <button type="button" onClick="toggleView('ads', 'createAd')">+</button>
+            </div>
+
+            <div id="ad">
+              <button>prev</button>
+              <img src="./pictures/fant1.jpg"/>
+              <button>next</button>
+              <button>BUY</button>
+              <h1>Logik tv</h1>
+              <p>500 kr</p>
+              <p>
+                Selger ein brukt logik TV, er blitt nokre år gammal. 29 tommer HD LED TV. Kjøper betaler frakt. Ny eller brukt:	Brukt
+                </p>
+            </div>
+
+            <div id="createAd">
+              <p>Title</p>
+              <input id="createTitle"></input>
+              <p>Price</p>
+              <input id="createPrice"></input>
+              <p>Description</p>
+              <input id="createDescription"></input>
+
+              <div class="imageUploadView">
+                <p>Images</p>
+                <input id="uploadImages" type="file" />
+                <button onclick="createAd()">create</button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        <script src="fant.js"></script>
+    </body>
+</html>

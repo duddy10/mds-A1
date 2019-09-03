@@ -1,0 +1,52 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+}
+
+.header {
+  display: inline-block;
+}
+
+.content {
+
+}
+
+.headerLeft {
+  float: left;
+}
+
+.headerRight {
+  float: right;
+}
+
+.box {
+
+}
+
+.imageUploadView {
+  border-radius: 5px;
+}
+
+#login {
+  display: none;
+}
+
+#createUser {
+  display: none;
+}
+
+#ads {
+  display: none;
+}
+
+#ad {
+  display: none;
+}
+
+#createAd
+{
+ display: block;
+}
