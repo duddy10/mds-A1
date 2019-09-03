@@ -31,7 +31,7 @@ html, body {
 }
 
 #login {
-  display: none;
+  display: block;
 }
 
 #createUser {
@@ -48,5 +48,5 @@ html, body {
 
 #createAd
 {
- display: block;
+ display: none;
 }
