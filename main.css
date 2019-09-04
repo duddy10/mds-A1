@@ -3,27 +3,83 @@ html, body {
   padding: 0;
 }
 
+body {
+  font-family: monospace;
+}
+
 .container {
+  width: 40vw;
+  display: block;
+  margin: auto;
 }
 
 .header {
-  display: inline-block;
+  display: block;
+  height: 8vh;
+  border-radius: 48px 48px 0 0;
+  background-color: grey;
 }
 
 .content {
+  margin: auto;
+  display:block;
+}
 
+.content h1{
+  font-size: 2em;
+}
+
+.content p{
+  font-size: 1.3em;
 }
 
 .headerLeft {
   float: left;
+  padding: 2vh 6vw 2vh 6vw;
+  font-size: 3em;
 }
 
 .headerRight {
   float: right;
+  padding: 2vh 6vw 2vh 6vw;
+  font-size: 3em;
+}
+
+.headerLeft:active {
+  border: 2px solid black;
+  border-radius: 50px;
+}
+
+.headerRight:active {
+  border: 2px solid black;
+  border-radius: 50px;
+}
+
+.content input {
+  margin: 15px;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
 }
 
 .box {
+  margin: auto;
+  width: 40vw;
+  margin: 20px 0 20px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px 0 10px 0;
+}
 
+.box img {
+  width: 40vw;
+  margin: 5px 0 5px 0;
+}
+
+.box h1,p {
+  margin: 15px 5px 15px 5px;
 }
 
 .imageUploadView {
@@ -31,22 +87,86 @@ html, body {
 }
 
 #login {
-  display: block;
+  display:block;
+  margin:auto;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #createUser {
   display: none;
+  margin:auto;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #ads {
   display: none;
 }
 
-#ad {
-  display: none;
+#newAd {
+    display: none;
+    position: fixed;
+    bottom: 5%;
+    right: 35%;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+    font-size: 2.5em;
+    padding: 0px;
 }
 
-#createAd
-{
+#ads button:active {
+  height: 60px;
+  width:60px;
+}
+
+#ad {
+  margin:auto;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+}
+
+#ad img {
+  width: 40vw;
+}
+
+#forwardButton {}
+
+#backButton {}
+
+#createAd {
  display: none;
+ margin:auto;
+ text-align: center;
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%, -50%);
+}
+
+#createAd img {
+  margin: 5px;
+  height: 40vh;
+}
+
+#myPage {
+  margin:auto;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -6,8 +6,9 @@
         <title>Fant 2019</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="reset.css" rel="stylesheet" type="text/css"/>
         <link href="main.css" rel="stylesheet" type="text/css"/>
-
+        <script src="fant.js"></script>
     </head>
 
     <body>
@@ -15,11 +16,11 @@
         <div class="container">
 
           <div class="header">
-            <div class="headerLeft">
+            <div class="headerLeft" onclick="toggleView('ads')">
               <h1 id="homeButton">FANT</h1>
             </div>
 
-            <div class="headerRight">
+            <div class="headerRight" onclick="loadMyPage()">
               <h1 id="me">Login</h1>
             </div>
           </div>
@@ -30,9 +31,9 @@
               <h1>USERNAME</h1>
               <input id="usernameLogin" type="text"></input>
               <h1>PASSWORD</h1>
-              <input id="passwordLogin" type="text"></input>
-              <button type="button" onclick="login()">Login</button>
-              <button type="button" onClick="toggleView('login', 'createUser')">Create new user</button>
+              <input id="passwordLogin" type="password"></input><br/>
+              <button type="button" onclick="login()">login</button><br/>
+              <button type="button" onClick="toggleView('createUser')">Create new user</button>
             </div>
 
             <div id="createUser">
@@ -43,24 +44,15 @@
               <p>Postal Code</p><input id="createUserPostalCode"></input>
               <p>Email Adress</p><input id="createUserEmailAdress"></input>
               <p>Username</p><input id="createUserUsername"></input>
-              <p>Password</p><input id="createUserPassword"></input>
+              <p>Password</p><input id="createUserPassword"></input><br/>
               <button type="button" onclick="createUser()">Create User</button>
             </div>
 
             <div id="ads">
-              <button id="newAd" type="button" onClick="toggleView('ads', 'createAd')">+</button>
+              <button id="newAd" type="button" onClick="toggleView('createAd')">+</button>
             </div>
 
             <div id="ad">
-              <button>prev</button>
-              <img src="./pictures/fant1.jpg"/>
-              <button>next</button>
-              <button>BUY</button>
-              <h1>Logik tv</h1>
-              <p>500 kr</p>
-              <p>
-                Selger ein brukt logik TV, er blitt nokre år gammal. 29 tommer HD LED TV. Kjøper betaler frakt. Ny eller brukt:	Brukt
-                </p>
             </div>
 
             <div id="createAd">
@@ -71,17 +63,22 @@
               <p>Description</p>
               <input id="createDescription"></input>
 
-              <div class="imageUploadView">
+              <div id="imageUploadView">
                 <p>Images</p>
-                <input id="uploadImages" type="file" />
-                <button onclick="createAd()">create</button>
+                <input id="uploadImages" type="file" onchange="handleImage()"/><br/>
+                <button onclick="removeSelectedImage()">Delete image</button><br/>
               </div>
 
+              <button onclick="createAd()">create</button>
+              <button onclick="cancel()">cancel</button>
+
             </div>
+
+            <div id="myPage"></div>
 
           </div>
 
         </div>
-        <script src="fant.js"></script>
+
     </body>
 </html>
