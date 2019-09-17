@@ -21,7 +21,7 @@ function handleImage(){
   img.src = window.URL.createObjectURL(imageFile);
   img.style.height = "250px";
   img.style.width = "250px";
-  img.id = img.src;
+  img.id = img.src.toString();
   img.style.opacity = 1;
   img.onclick = () => selectImage(img);
   images.push(img);
@@ -49,10 +49,11 @@ function selectImage(img){
 
 // removes the selected image from view and array
 function removeSelectedImage(){
-  images = images.filter(function(element) {
-  element.remove();
-  return element.style.opacity === 1;
-  });
+  for(let i = 0; i < selectedImages.length; i++){
+    let element = document.getElementById(selectedImages[i]);
+    element.parentNode.removeChild(element);
+    images.splice(images.indexOf(selectedImages[i],1));
+  }
   selectedImages = [];
 }
 
