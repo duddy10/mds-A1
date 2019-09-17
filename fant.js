@@ -21,7 +21,7 @@ function handleImage(){
   img.src = window.URL.createObjectURL(imageFile);
   img.style.height = "250px";
   img.style.width = "250px";
-  img.id = img.src.toString();
+  img.id = img.src;
   img.style.opacity = 1;
   img.onclick = () => selectImage(img);
   images.push(img);
@@ -34,14 +34,11 @@ function handleImage(){
 * @param img
 */
 function selectImage(img){
-  console.log("ran");
   if(img.style.opacity == 1){
     img.style.opacity = 0.5;
     selectedImages.push([img.id]);
-    console.log("first");
   } else {
     img.style.opacity = 1;
-    console.log("second");
     selectedImages.splice(selectedImages.indexOf(img),1);
   }
 
@@ -102,6 +99,12 @@ function createAd(){
 
   // will handle the image inputs
   let uploadedImages = images;
+
+  // removing onclick and opacity attributes
+  for(let i = 0; i < uploadedImages.length; i++){
+    uploadedImages[i].style.opacity = 1;
+    uploadedImages[i].onclick = "";
+  }
 
   // resets the image holder
   images = [];
