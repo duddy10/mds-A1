@@ -143,10 +143,6 @@ button {
   width: 40vw;
 }
 
-#forwardButton {}
-
-#backButton {}
-
 #createAd {
  display: none;
  margin:auto;

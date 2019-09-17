@@ -148,7 +148,7 @@ function logout(){
 
 // function to handle cancelation of ad creating
 function cancel(){
-  toggleView(ads);
+  toggleView("ads");
 }
 
 /*
@@ -197,8 +197,7 @@ function adsLoader(){
       box.onclick = () => adLoader(ads[i]);
 
       // initialise an ads content
-      let img = document.createElement("img");
-      img.src = ads[i].images[0].src;
+      let img = ads[i].images[0];
       box.appendChild(img);
 
       let title = document.createElement("h1");
