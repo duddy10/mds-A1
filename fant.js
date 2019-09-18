@@ -314,7 +314,8 @@ function slideImage(dir){
 
 // function to load my page elements
 function loadMyPage(){
-  if (currentUser){
+  console.log(currentUser);
+  if (currentUser && true){
     clearNode("myPage");
     toggleView("myPage");
 

@@ -35,24 +35,22 @@ body {
 
 .headerLeft {
   float: left;
-  padding: 2vh 6vw 2vh 6vw;
+  padding: 2vh 5vw 2vh 6vw;
   font-size: 3em;
 }
 
 .headerRight {
   float: right;
-  padding: 2vh 6vw 2vh 6vw;
+  padding: 2vh 6vw 2vh 5vw;
   font-size: 3em;
 }
 
 .headerLeft:active {
-  border: 2px solid black;
-  border-radius: 50px;
+  color: white;
 }
 
 .headerRight:active {
-  border: 2px solid black;
-  border-radius: 50px;
+  color: white;
 }
 
 .content input {
@@ -131,11 +129,8 @@ button {
 
 #ad {
   margin:auto;
+  margin-top: 3vh;
   text-align: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 40vw;
 }
 
