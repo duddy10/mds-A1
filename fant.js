@@ -66,6 +66,9 @@ function toggleView(nextView){
   if(nextView === "ads"){
       adsLoader();
     }
+
+  // clears the inputs on view change
+  clearInputs();
 }
 
 // retrieves the input of create user page and creates a user object
@@ -351,6 +354,10 @@ function loadMyPage(){
     password.innerHTML = "password: " + currentUser.password + "<b/>";
     document.getElementById("myPage").appendChild(password);
 
+    let changePasswordButton = document.createElement("button");
+    changePasswordButton.innerHTML = "CHANGE PASSWORD";
+    changePasswordButton.onclick = () => changePassword();
+
     let logoutButton = document.createElement("button");
     logoutButton.innerHTML = "LOGOUT";
     logoutButton.onclick = () => logout();
@@ -360,6 +367,16 @@ function loadMyPage(){
     toggleView("login");
   }
 
+}
+
+// funtion that clears input fields
+function clearInputs(){
+  let elements = document.getElementsByTagName("input");
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i].type == "text") {
+      elements[i].value = "";
+    }
+  }
 }
 
 // user class

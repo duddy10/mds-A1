@@ -35,13 +35,13 @@ body {
 
 .headerLeft {
   float: left;
-  padding: 2vh 5vw 2vh 6vw;
+  padding: 2vh 3vw 2vh 4vw;
   font-size: 3em;
 }
 
 .headerRight {
   float: right;
-  padding: 2vh 6vw 2vh 5vw;
+  padding: 2vh 4vw 2vh 3vw;
   font-size: 3em;
 }
 
@@ -98,10 +98,11 @@ button {
   display: none;
   margin:auto;
   text-align: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 10px;
+}
+
+#createUser p{
+  margin: 5px;
 }
 
 #ads {
@@ -113,13 +114,12 @@ button {
     position: fixed;
     bottom: 5%;
     right: 35%;
-    border-radius: 50%;
-    background-color: white;
-    border: 2px solid black;
-    height: 50px;
-    width: 50px;
-    font-size: 2.5em;
-    padding: 0px;
+    height: 60px;
+    width: 60px;
+}
+
+#newAd:active{
+  transform: scale(1.1);
 }
 
 #ads button:active {
@@ -142,10 +142,6 @@ button {
  display: none;
  margin:auto;
  text-align: center;
- position: absolute;
- left: 50%;
- top: 50%;
- transform: translate(-50%, -50%);
 }
 
 #createAd img {
