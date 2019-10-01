@@ -1,0 +1,158 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: monospace;
+}
+
+.container {
+  width: 40vw;
+  display: block;
+  margin: auto;
+}
+
+.header {
+  display: block;
+  height: 8vh;
+  border-radius: 48px 48px 0 0;
+  background-color: grey;
+}
+
+.content {
+  margin: auto;
+  display:block;
+}
+
+.content h1{
+  font-size: 1.2em;
+}
+
+.content p{
+  font-size: 1.3em;
+}
+
+.headerLeft {
+  float: left;
+  padding: 2vh 3vw 2vh 4vw;
+  font-size: 2em;
+}
+
+.headerRight {
+  float: right;
+  padding: 2vh 4vw 2vh 3vw;
+  font-size: 2em;
+}
+
+.headerLeft:active {
+  color: white;
+}
+
+.headerRight:active {
+  color: white;
+}
+
+.content input {
+  margin: 15px;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+}
+
+.box {
+  margin: auto;
+  width: 40vw;
+  margin: 20px 0 20px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px 0 10px 0;
+}
+
+.box img {
+  width: 40vw;
+  margin: 5px 0 5px 0;
+}
+
+.box h1,p {
+  margin: 15px 5px 15px 5px;
+}
+
+.imageUploadView {
+  border-radius: 5px;
+}
+
+#login {
+  display:block;
+  margin:auto;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#createUser {
+  display: none;
+  margin:auto;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#createUser p{
+  margin: 5px;
+}
+
+#ads {
+  display: none;
+}
+
+#newAd {
+    position: fixed;
+    bottom: 5%;
+    right: 35%;
+    height: 60px;
+    width: 60px;
+}
+
+#newAd:active{
+  transform: scale(1.1);
+}
+
+#ads button:active {
+  height: 60px;
+  width:60px;
+}
+
+#ad {
+  margin:auto;
+  margin-top: 3vh;
+  text-align: center;
+  width: 40vw;
+}
+
+#ad img {
+  width: 40vw;
+}
+
+#createAd {
+ display: none;
+ margin:auto;
+ text-align: center;
+}
+
+#createAd img {
+  margin: 5px;
+  height: 40vh;
+}
+
+#myPage {
+  margin:auto;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

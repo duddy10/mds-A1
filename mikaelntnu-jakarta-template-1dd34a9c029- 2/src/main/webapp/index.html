@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Fant 2019</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="reset.css" rel="stylesheet" type="text/css"/>
+        <link href="main.css" rel="stylesheet" type="text/css"/>
+        <script src="fant.js"></script>
+    </head>
+
+    <body>
+
+        <div class="container">
+
+          <div class="header">
+            <div class="headerLeft" onclick="toggleView('ads')">
+              <h1 id="homeButton">FANT</h1>
+            </div>
+
+            <div class="headerRight" onclick="loadMyPage()">
+              <h1 id="me">LOGIN</h1>
+            </div>
+          </div>
+
+          <div class="content">
+
+            <div id="login">
+              <h1>USERNAME</h1>
+              <input id="usernameLogin" type="text">
+              <h1>PASSWORD</h1>
+              <input id="passwordLogin" type="password"><br/>
+              <button type="button" onclick="login()">login</button><br/>
+              <button type="button" onClick="toggleView('createUser')">Create new user</button>
+            </div>
+
+            <div id="createUser">
+                <form action="api/auth/create" method="post" onsubmit="toggleView('login'); return false;">
+                    <p>Firstname</p><input name="firstName">
+                    <p>Lastname</p><input name="lastName">
+                    <p>Street Adress</p><input name="streetAdress">
+                    <p>City</p><input name="city">
+                    <p>Postal Code</p><input name="postalCode">
+                    <p>Email Adress</p><input name="emailAdress">
+                    <p>Username</p><input name="uid">
+                    <p>Password</p><input name="pwd" type="password"><br/>
+                    <input type="submit" value="Create"/>
+                </form>
+            </div>
+
+            <div id="ads">
+                <img src="pictures/plus.jpg" id="newAd" type="button" onClick="toggleView('createAd')"/>
+            </div>
+
+            <div id="ad">
+            </div>
+
+            <div id="createAd">
+              <p>Title</p>
+              <input id="createTitle">
+              <p>Price</p>
+              <input id="createPrice">
+              <p>Description</p>
+              <input id="createDescription">
+
+              <div id="imageUploadView">
+                <p>Images</p>
+                <input id="uploadImages" type="file" onchange="handleImage()"/><br/>
+                <button onclick="removeSelectedImage()">Delete image</button><br/>
+              </div>
+
+              <button onclick="addSellable()">create</button>
+              <button onclick="cancel()">cancel</button>
+
+            </div>
+
+            <div id="myPage"></div>
+
+
+          </div>
+            
+        
+        </div>
+
+    </body>
+</html>
