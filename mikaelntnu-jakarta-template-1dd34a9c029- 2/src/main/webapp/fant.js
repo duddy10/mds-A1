@@ -13,7 +13,7 @@ let exampleImage2 = new Image();
 exampleImage2.src = "pictures/fant2.jpg";
 let exampleImage3 = new Image();
 exampleImage3.src = "pictures/fant3.jpg";
-let token = '';
+let token = null;
 
 // handles the image input and displays it
 function handleImage(){
@@ -94,16 +94,17 @@ function createAd(){
   toggleView("ads");
 }
 
-function addSellable() {
+async function addSellable() {
     const data = new FormData();
     data.append('title',document.getElementById("createTitle").value);
     data.append('description',document.getElementById("createDescription").value);
     data.append('price',document.getElementById("createPrice").value);
-    for(let file of photos) {
-        data.append('files',document.getElementById("uploadImages").files);
+    let imagesUploaded = document.getElementById("uploadImages").files;
+    for(let file of imagesUploaded) {
+        data.append('files', file);
     }
 
-    fetch('api/fant/create', {
+    const response = await fetch('api/fant/create', {
         method: 'POST',
         withCredentials: true,
         credentials: 'include',
@@ -112,20 +113,19 @@ function addSellable() {
         },
         body: data
     });
+    const sellable = await response.json();
+    console.log(sellable);
 }
 
 // function to handle login with backend communication
-function login() {
+async function login() {
     const uid = document.getElementById('usernameLogin').value;
     const pwd = document.getElementById('passwordLogin').value;
 
-    fetch('api/auth/login?uid='+ uid + '&pwd=' + pwd)
-            .then(response => response.text())
-            .then(bearer => {
-                token = bearer;
-                document.getElementById("me").innerHTML = uid;
-                toggleView('ads');
-            }).catch (exception => console.log(exception));
+    const response = await fetch('api/auth/login?uid=' + uid + '&pwd=' +pwd);
+    token = await response.text();
+    toggleView("ads");
+
 }
 
 // function to log logout
